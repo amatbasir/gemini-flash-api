@@ -106,7 +106,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage }); // Create the multer instance
 
-// Route to generate text content using Gemini Flash API
+// Route to generate text content using Gemini Flash-API
 app.post('/generate-text', async (req, res) => {
     const { prompt } = req.body; // Expecting a 'prompt' field in the JSON request body
 
