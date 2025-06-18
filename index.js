@@ -25,7 +25,6 @@ const PORT = process.env.PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 const GEMINI_MODEL_NAME = process.env.GEMINI_MODEL_NAME || 'gemini-1.5-flash-latest';
-const IMAGE_API_URL = process.env.IMAGE_API_URL || 'http://localhost:5000/generate_image'; // Default to local Flask API
 
 // Parse generation configuration parameters from strings to numbers
 const GEMINI_TEMPERATURE = parseFloat(process.env.GEMINI_TEMPERATURE || '0.7');
