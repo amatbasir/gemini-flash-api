@@ -42,10 +42,6 @@ if (!GOOGLE_API_KEY) {
     process.exit(1); // Exit the application if the critical API key is missing
 }
 
-if (!IMAGE_API_URL) {
-  console.warn("⚠️  Warning: IMAGE_API_URL is not set.  Using the default local URL.");
-  console.warn("   Set IMAGE_API_URL in your .env file to point to your image generation API (e.g., Flask app).");
-}
 
 // 5. Initialize Google Generative AI Client
 const genAI = new GoogleGenerativeAI(GOOGLE_API_KEY);
@@ -253,7 +249,6 @@ app.listen(PORT, () => {
     console.log(`Running in ${NODE_ENV} mode`);
     console.log(`Using Gemini Model: ${GEMINI_MODEL_NAME}`);
     console.log(`Project: ${PROJECT_NAME}`);
-    console.log(`Image API URL: ${IMAGE_API_URL}`);
     // For security, avoid logging the full API key.
     // You can log the last few characters for debugging if necessary:
     // console.log(`API Key (last 4 chars): ${GOOGLE_API_KEY.slice(-4)}`);
